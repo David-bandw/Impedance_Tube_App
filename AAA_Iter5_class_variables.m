@@ -15,6 +15,8 @@ classdef AAA_Iter5_class_variables < handle
 
         %Calculated variables
         alphaIR_AVG;
+
+        x=1;
         c0;
         f;
         filename;
@@ -170,25 +172,25 @@ classdef AAA_Iter5_class_variables < handle
             
         end
 
-        
         function SAVE_MAT_FILE(obj, title)
 
 
-            title_full = title + ".mat"; 
-            excitation = obj.excitation; %#ok<*PROPLC> 
-            fs = obj.fs; 
-            M12.data_ch1_Pa = obj.M12_data_ch1_Pa; 
-            M12.data_ch2_Pa = obj.M12_data_ch2_Pa; 
-            M21.data_ch1_Pa = obj.M21_data_ch1_Pa; 
-            M21.data_ch2_Pa = obj.M21_data_ch2_Pa; 
-            mic1_sensitivity = obj.mic1_sensitivity; 
-            mic2_sensitivity = obj.mic2_sensitivity; 
-            t = obj.t; 
+            title_full = title + ".mat";
+            excitation = obj.excitation; %#ok<*PROPLC>
+            fs = obj.fs;
+            M12.data_ch1_Pa = obj.M12_data_ch1_Pa;
+            M12.data_ch2_Pa = obj.M12_data_ch2_Pa;
+            M21.data_ch1_Pa = obj.M21_data_ch1_Pa;
+            M21.data_ch2_Pa = obj.M21_data_ch2_Pa;
+            mic1_sensitivity = obj.mic1_sensitivity;
+            mic2_sensitivity = obj.mic2_sensitivity;
+            t = obj.t;
                 
             save(title_full, 'excitation', 'fs', "M12", "M21", ...
-                'mic1_sensitivity', 'mic2_sensitivity', 't');  
+                'mic1_sensitivity', 'mic2_sensitivity', 't');
 
         end
+        
         
         
 
